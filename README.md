@@ -1,7 +1,9 @@
 ## Usage
 
 ```js
-export const client = new PrintifyClient({
+import PrintifyClient from '@kastlabs/printify-client';
+
+const client = new PrintifyClient({
   apiKey: process.env.PRINTIFY_API_KEY,
   shopId: process.env.PRINTIFY_SHOP_ID,
 });
