@@ -1,3 +1,14 @@
+## Usage
+
+```js
+export const client = new PrintifyClient({
+  apiKey: process.env.PRINTIFY_API_KEY,
+  shopId: process.env.PRINTIFY_SHOP_ID,
+});
+```
+
+## Actual code
+
 ```js
 export default class PrintifyClient {
   private apiKey: string;
