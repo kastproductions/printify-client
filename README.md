@@ -7,6 +7,9 @@ const client = new PrintifyClient({
   apiKey: process.env.PRINTIFY_API_KEY,
   shopId: process.env.PRINTIFY_SHOP_ID,
 });
+
+// get all products
+client.getProducts().then(data => console.log(data));
 ```
 
 ## Actual code
