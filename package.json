@@ -1,0 +1,64 @@
+{
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@kastlabs/printify-client",
+  "author": "kastlabs",
+  "module": "dist/printify-client.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/printify-client.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/printify-client.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.1.0",
+    "husky": "^8.0.1",
+    "size-limit": "^8.1.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  },
+  "description": "Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kastproductions/printify-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kastproductions/printify-client/issues"
+  },
+  "homepage": "https://github.com/kastproductions/printify-client#readme"
+}
