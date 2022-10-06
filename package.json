@@ -46,6 +46,7 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.1.0",
+    "@types/isomorphic-fetch": "^0.0.36",
     "husky": "^8.0.1",
     "size-limit": "^8.1.0",
     "tsdx": "^0.14.1",
@@ -62,6 +63,6 @@
   },
   "homepage": "https://github.com/kastproductions/printify-client#readme",
   "dependencies": {
-    "node-fetch": "2"
+    "isomorphic-fetch": "^3.0.0"
   }
 }

@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-fetch';
 const BASE_URL = 'https://api.printify.com/v1';
 
 type Shops = {
