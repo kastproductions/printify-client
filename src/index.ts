@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 const BASE_URL = 'https://api.printify.com/v1';
 
 type Shops = {
@@ -90,14 +91,14 @@ export default class PrintifyClient {
   ): Promise<T> {
     const response = await fetch(BASE_URL + endpoint, {
       ...options,
-      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
         Authorization: `Bearer ${this.apiKey}`,
       },
     });
     if (response.ok) {
-      return await response.json();
+      const result = (await response.json()) as T;
+      return result;
     } else {
       throw new Error(`${response.status} ${response.statusText}`);
     }
